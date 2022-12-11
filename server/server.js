@@ -10,9 +10,10 @@ const port = process.env.PORT || 3000;
 app.use(express.static(buildPath));
 
 app.get('*', (req, res) => {
-   res.sendFile(path.join(buildPath, 'index.html'));
+   res.sendFile('./public/index.html');
 });
 
 app.listen(port, () => {
    console.log('Server is up!');
 });
+
